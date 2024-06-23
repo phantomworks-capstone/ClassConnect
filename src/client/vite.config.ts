@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit(), svelteTesting()],
 	test: {
 		environment: 'jsdom',
-		setupFiles: ['./vitest-setup.js']
+		setupFiles: ['./vitest-setup.js','__setups__/canvas.js']
 	},
 	ssr: {
 		noExternal: ['three']
