@@ -47,6 +47,9 @@
 				if (workspace.id !== name) {
 					workID = name;
 					breadcrumbItems[i].name = await getWorkspaceDetails(workID);
+					if (breadcrumbItems[i].name === 'workspace') {
+						breadcrumbItems[i].name = "";
+					}
 				} else {
 					breadcrumbItems[i].name = workspace.name;
 				}
